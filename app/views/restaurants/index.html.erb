@@ -1,11 +1,12 @@
-<h1>Restaurants</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527224538127-2104bb71c51b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80);">
+  <h1>Restaurants</h1>
+  <div class="flex-container">
+        <div class="flex-item">
+          <% @restaurants.each do |restaurant| %>
+            <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+            <p><%= restaurant.category  %></p>
+          <% end %>
+        </div>
+  </div>
+</div>
 
-<% @restaurants.each do |restaurant| %>
-<ul>
-  <li>
-   <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
-   <p><%= restaurant.category  %></p>
-  </li>
-</ul>
-
-<% end %>

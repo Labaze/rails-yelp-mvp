@@ -7,12 +7,11 @@
 <p><%= @restaurant.category%></p>
 
 <p><% @reviews.each do |review|%>
-  <p><%=  review.content %></p>
-  <p><%=  review.rating %></p>
+  <p> avis : <%= review.content %></p>
+  <p> note :<%=  review.rating %> / 5</p>
 <% end %>
 
 
-<!--  -->
 
 <%= link_to restaurants_path, {class: "btn btn-primary"} do %>
   Go back to restaurants
